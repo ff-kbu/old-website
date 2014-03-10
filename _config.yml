@@ -1,0 +1,10 @@
+name: Your New Jekyll Site
+markdown: redcarpet
+pygments: true
+image:
+    source: _assets/images/original
+    output: generated
+    presets:
+        medium:
+            width: 300
+            height: 260
