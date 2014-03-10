@@ -11,7 +11,45 @@
 		{% stylesheet base %}
 
 	</head>
-	<body class="kubepage">
+	<div class="wrap" id="pagetop">
+	<div class="title">
+		<div class="row units-row">
+			<h1 class="unit-60">Freifunk Köln, Bonn und Umgebung</h1>
+		</div>
+	</div>
+	<header class="group menubar">	
+		<div class="row">
+			<nav class="navbar navbar-left">
+				<ul>
+					<li>
+						<a href="index.html#ueber">Über</a>
+					</li>
+					<li>
+						<a href="index.html#mitmachen">Mitmachen</a>
+					</li>
+					<li>
+						<a href="index.html#kontakt">Kontakt</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="navbar navbar-right">
+				<ul>
+					<li>
+						<a href="impressum.html">Impressum</a>
+					</li>
+					<li>
+						<a href="{{ site.wikilink }}">Wiki</a>
+					</li>
+					<li>
+						<a href="{{ site.maplink }}">Karte</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+</div>
+
+<body class="kubepage">
 		  {{ content }}
 
 	</body>

@@ -1,5 +1,8 @@
-name: Your New Jekyll Site
+name: Freifunk Köln, Bonn und Umgebung
+wikilink: http://kbu.freifunk.net/
+maplink: http://map.kbu.freifunk.net/
 markdown: redcarpet
+exclude: [publish.sh]
 pygments: true
 image:
     source: _assets/images/original

@@ -1,28 +1,87 @@
+$color2: #444444;
+$color1: #dc0067;
+$header-bg: #444444;
+$menu-bg: #ffb400;
+
 h1, h2, h3, h4, body {
 	font-family: sans-serif;
 	color: #000000;
 }
-
+h3 {
+	margin-bottom: 0.4em;
+}
+p {
+	margin-top: 0;
+	margin-bottom: 0.8em;
+}
 body {
-	background-color: #333333;
+	background-color: #eeeeee;
+	padding-bottom: 30px;
+}
+
+h2 {
+	background-color: $header-bg;
+	color: #ffffff;
+	padding: 10px 20px;
+	margin-bottom: 0;
+	font-size: 22px;
+}
+
+.navbar {
+	margin-bottom: 0;
 }
 
 .row {
+	overflow: hidden;
+}
+
+header {
+	border-bottom: 5px solid $color1;
+	margin-bottom: 10px;
+}
+
+
+#pagetop {
+	padding-top: 20px;
+//	background-color: $header-bg;
+	h1 {
+		color: #333333;
+	}
+}
+
+.title {
+//	background-color: #eeeeee;
+	div {
+		margin: 10px 0;
+	}
+}
+
+.title,
+.menubar .row,
+.main .wrap {
     margin: auto;
     max-width: 1200px;
     width: 70%;
+	overflow: hidden;
+	clear: both;
+}
+.main .wrap {
+	margin-top: 10px;
 }
 
 .main .row {
 	background-color: #ffffff;
 	padding: 20px;
-	border-bottom: 5px solid #dc0067;
+	border:  1px dotted $color1;
+	border-top: 0;
+	border-bottom: 5px solid $color1;
 }
 
 
-
 @media only screen and (max-width: 400px) {
-	.row, .intro {
+	.title,
+	.menubar .row,
+	.main .wrap {
 	    width: 98%;
 	}
 }
@@ -48,14 +107,14 @@ body {
 
 
 .menubar {
-	background-color: #ffb400;
+	background-color: $menu-bg;
 	ul li {
 		margin: 0;
 	}
 	a {
 		border-right: 1px solid #ffffff;
 		display: block;
-		color: #000000;
+		color: #333333;
 		display: block;
 		padding: 10px 15px;
 		margin: 0 auto;
@@ -74,7 +133,7 @@ body {
 
 	ul li a:hover {
 		color: #ffffff;
-		background-color: #333333;
+		background-color: $color1;
 	}
 	li:first-child a {
 		border-left: 1px solid #ffffff;
@@ -90,30 +149,6 @@ body {
 		nav:last-child li:last-child {
 			border: 0;
 		}
-	}
-}
-.navbar {
-	margin-bottom: 0;
-}
-
-.main .wrap {
-	overflow: hidden;
-	clear: both;
-	margin-top: 10px;
-}
-
-header {
-	border-bottom: 5px solid #333333;
-	margin-top: 20px;
-}
-
-
-#pagetop {
-	margin-top: 40px;
-	padding-top: 20px;
-	background-color: #eeeeee;
-	h1 {
-		color: #dc0067;
 	}
 }
 
