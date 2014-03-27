@@ -11,6 +11,12 @@
 		{% stylesheet base %}
 
 	</head>
+<body class="kubepage">
+<!--
+Website for Freifunk Köln, Bonn und Umgebung
+Sources: http://gitorious.datentonne.net/ff-kbu/website/
+Licensed under WTFPL (Licence included in Repo)
+-->
 	<div class="wrap" id="pagetop">
 	<div class="title">
 		<div class="row units-row">
@@ -22,21 +28,21 @@
 			<nav class="navbar navbar-left">
 				<ul>
 					<li>
-						<a href="index.html#ueber">Über</a>
+						<a href="#ueber">Über</a>
 					</li>
 					<li>
-						<a href="index.html#mitmachen">Mitmachen</a>
+						<a href="#mitmachen">Mitmachen</a>
 					</li>
 					<li>
-						<a href="index.html#kontakt">Kontakt</a>
+						<a href="#kontakt">Kontakt</a>
+					</li>
+					<li>
+						<a href="#impressum">Impressum</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="navbar navbar-right">
 				<ul>
-					<li>
-						<a href="impressum.html">Impressum</a>
-					</li>
 					<li>
 						<a href="{{ site.wikilink }}">Wiki</a>
 					</li>
@@ -49,7 +55,6 @@
 	</header>
 </div>
 
-<body class="kubepage">
 		  {{ content }}
 
 	</body>

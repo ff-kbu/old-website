@@ -1,6 +1,6 @@
 name: Freifunk Köln, Bonn und Umgebung
-wikilink: http://kbu.freifunk.net/
-maplink: http://map.kbu.freifunk.net/
+wikilink: http://kbu.freifunk.net/wiki/
+maplink: http://map.kbu.freifunk.net/geomap.html
 markdown: redcarpet
 exclude: [publish.sh]
 pygments: true
