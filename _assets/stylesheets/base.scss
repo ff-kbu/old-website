@@ -26,6 +26,13 @@ h2 {
 	margin-bottom: 0;
 	font-size: 22px;
 }
+#ueber:before, #mitmachen:before, #kontakt:before {
+  display: block; 
+  content: " "; 
+  margin-top: -285px; 
+  height: 285px; 
+  visibility: hidden; 
+}
 
 .navbar {
 	margin-bottom: 0;
@@ -37,13 +44,14 @@ h2 {
 
 header {
 	border-bottom: 5px solid $color1;
-	margin-bottom: 10px;
 }
 
 
 #pagetop {
-	padding-top: 20px;
-//	background-color: $header-bg;
+//	padding-top: 20px;
+	position: fixed;
+	width: 100%;
+	background-color: #eeeeee;
 	h1 {
 		color: #333333;
 	}
@@ -56,6 +64,10 @@ header {
 	}
 }
 
+.main {
+	padding-top: 200px;
+}
+
 .title,
 .menubar .row,
 .main .wrap {
@@ -66,7 +78,7 @@ header {
 	clear: both;
 }
 .main .wrap {
-	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .main .row {
