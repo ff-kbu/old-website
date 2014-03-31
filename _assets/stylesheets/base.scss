@@ -26,12 +26,12 @@ h2 {
 	margin-bottom: 0;
 	font-size: 22px;
 }
-#ueber:before, #mitmachen:before, #kontakt:before {
-  display: block; 
-  content: " "; 
-  margin-top: -285px; 
-  height: 285px; 
-  visibility: hidden; 
+
+.anchor {
+	display: block;
+	height: 180px;
+	margin-top: -180px;
+	visibility: hidden;
 }
 
 .navbar {
@@ -49,11 +49,19 @@ header {
 
 #pagetop {
 //	padding-top: 20px;
-	position: fixed;
 	width: 100%;
 	background-color: #eeeeee;
 	h1 {
 		color: #333333;
+	}
+	@media only screen and (min-width: 768px) {
+		height: 160px;
+		position: fixed;
+		header {
+			bottom: 0;
+			position: absolute;
+		    width: 100%;
+		}
 	}
 }
 
@@ -65,7 +73,11 @@ header {
 }
 
 .main {
-	padding-top: 200px;
+	padding-top: 20px;
+	padding-bottom: 100%;
+	@media only screen and (min-width: 768px) {
+		padding-top: 180px;
+	}
 }
 
 .title,
@@ -78,7 +90,7 @@ header {
 	clear: both;
 }
 .main .wrap {
-	margin-bottom: 10px;
+	margin-bottom: 30px;
 }
 
 .main .row {
