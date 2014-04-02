@@ -19,6 +19,10 @@ Licensed under WTFPL (Licence included in Repo)
 -->
 	<div class="wrap" id="pagetop">
 	<div class="title">
+		<span class="lang_select">
+			<a href="{{ page.url }}" >{% t global.deutsch %}</a> | 
+			<a href="/en/{{ page.url }}" >{% t global.englisch %}</a>
+		</span>
 		<div class="row units-row">
 			<h1 class="">Freifunk Köln, Bonn und Umgebung</h1>
 		</div>
@@ -55,7 +59,7 @@ Licensed under WTFPL (Licence included in Repo)
 	</header>
 </div>
 
-		  {{ content }}
+		  {{ content }} 
 
 	</body>
 </html>

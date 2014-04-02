@@ -1,3 +1,7 @@
+global:
+  englisch: english
+  deutsch: german
+
 default_layout:
   ueber: About
   mitmachen: Join
