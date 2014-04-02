@@ -3,6 +3,16 @@ $color1: #dc0067;
 $header-bg: #444444;
 $menu-bg: #ffb400;
 
+.lang_select{
+	float: right;
+	right: 5px;
+	position: absolute;
+	a, a:visited{
+		color: $color1;
+		font-weight: normal;
+	}
+}
+
 h1, h2, h3, h4, body {
 	font-family: sans-serif;
 	color: #000000;
