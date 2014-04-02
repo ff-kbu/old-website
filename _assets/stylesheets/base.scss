@@ -17,6 +17,7 @@ p {
 body {
 	background-color: #eeeeee;
 	padding-bottom: 30px;
+	overflow-y: scroll;
 }
 
 h2 {
@@ -46,6 +47,9 @@ header {
 	border-bottom: 5px solid $color1;
 }
 
+#languageswitch {
+	float: right;
+}
 
 #pagetop {
 //	padding-top: 20px;
@@ -140,7 +144,7 @@ header {
 		display: block;
 		color: #333333;
 		display: block;
-		padding: 10px 15px;
+		padding: 10px 9px;
 		margin: 0 auto;
 		cursor: pointer;
 		text-align: center;

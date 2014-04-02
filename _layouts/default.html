@@ -16,10 +16,13 @@
 Website for Freifunk Köln, Bonn und Umgebung
 Sources: http://gitorious.datentonne.net/ff-kbu/website/
 Licensed under WTFPL (Licence included in Repo)
+Kube Framework licensed under MIT, source: http://imperavi.com/kube/
 -->
 	<div class="wrap" id="pagetop">
 	<div class="title">
 		<div class="row units-row">
+<!--			<div id="languageswitch">
+			</div>-->
 			<h1 class="">Freifunk Köln, Bonn und Umgebung</h1>
 		</div>
 	</div>
@@ -43,6 +46,14 @@ Licensed under WTFPL (Licence included in Repo)
 			</nav>
 			<nav class="navbar navbar-right">
 				<ul>
+
+				<li>
+			{% if page.lang == "de" %}
+				<a href="/en/">EN</a>
+			{% else %}
+				<a href="/">DE</a>
+			{% endif %}
+			</li>
 					<li>
 						<a href="{{ site.wikilink }}">Wiki</a>
 					</li>
