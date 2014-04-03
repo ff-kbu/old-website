@@ -2,4 +2,4 @@ RewriteEngine on
 RewriteCond %{HTTP:Accept-Language} !^(de) [NC]
 RewriteCond %{HTTP:Accept-Language} !^(de-de) [NC]
 RewriteCond %{REQUEST_URI} /$
-RewriteRule .* /en/index.html [L]
+RewriteRule .* /en/index.html [L] 
