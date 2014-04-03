@@ -1,0 +1,11 @@
+global:
+  englisch: english
+  deutsch: deutsch
+default_layout:
+  ueber: Über
+  mitmachen: Mitmachen
+  kontakt: Kontakt
+  impressum: Impressum
+  wiki: Wiki
+  karte: Karte
+
