@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>{{ page.title }}</title>
+		<meta name="viewport" content="width=device-width">
+
+
+		{% stylesheet kube %}
+		{% stylesheet base %}
+
+	</head>
+<body class="kubepage">
+<!--
+Website for Freifunk Köln, Bonn und Umgebung
+Sources: http://gitorious.datentonne.net/ff-kbu/website/
+Licensed under WTFPL (Licence included in Repo)
+-->
+	<div class="wrap" id="pagetop">
+	<div class="title">
+		<div class="row units-row">
+			<h1 class="">Freifunk Köln, Bonn und Umgebung</h1>
+		</div>
+	</div>
+	<header class="group menubar">	
+		<div class="row">
+			<nav class="navbar navbar-left">
+				<ul>
+					<li>
+						<a href="#ueber">Über</a>
+					</li>
+					<li>
+						<a href="#mitmachen">Mitmachen</a>
+					</li>
+					<li>
+						<a href="#kontakt">Kontakt</a>
+					</li>
+					<li>
+						<a href="#impressum">Impressum</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="navbar navbar-right">
+				<ul>
+					<li>
+						<a href="{{ site.wikilink }}">Wiki</a>
+					</li>
+					<li>
+						<a href="{{ site.maplink }}">Karte</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+</div>
+
+		  {{ content }}
+
+	</body>
+</html>
