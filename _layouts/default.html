@@ -10,6 +10,10 @@
 		{% stylesheet kube %}
 		{% stylesheet base %}
 
+		{% javascript jquery-1.11.1.min %}
+		{% javascript jquery.sticky %}
+		{% javascript default %}
+
 	</head>
 <body class="kubepage">
 <!--
@@ -25,10 +29,23 @@ Kube framework licenced under MIT (http://imperavi.com/kube/)
 			<a href="/en/{{ page.url }}" >{% t global.englisch %}</a>
 		</span>
 		<div class="row units-row">
+			<div id="logo">
+			{% image logo.png" %}
+			</div>
 			<h1 class="">Freifunk Köln, Bonn und Umgebung</h1>
 		</div>
 	</div>
-	<header class="group menubar">	
+	<header class="group menubar">
+		<div id="title-small">
+			<div class="row">
+				<div id="inner-small">
+					{% image logo-small.png" %}
+					<span>
+					Freifunk KBU
+					</span>
+				</div>
+			</div>
+		</div>
 		<div class="row">
 			<nav class="navbar navbar-left">
 				<ul>

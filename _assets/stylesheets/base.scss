@@ -39,8 +39,8 @@ h2 {
 
 .anchor {
 	display: block;
-	height: 180px;
-	margin-top: -180px;
+	height: 250px;
+	margin-top: -250px;
 	visibility: hidden;
 }
 
@@ -56,40 +56,6 @@ header {
 	border-bottom: 5px solid $color1;
 }
 
-
-#pagetop {
-//	padding-top: 20px;
-	width: 100%;
-	background-color: #eeeeee;
-	h1 {
-		color: #333333;
-	}
-	@media only screen and (min-width: 768px) {
-		height: 160px;
-		position: fixed;
-		header {
-			bottom: 0;
-			position: absolute;
-		    width: 100%;
-		}
-	}
-}
-
-.title {
-//	background-color: #eeeeee;
-	div {
-		margin: 10px 0;
-	}
-}
-
-.main {
-	padding-top: 20px;
-	padding-bottom: 40%;
-	@media only screen and (min-width: 768px) {
-		padding-top: 180px;
-	}
-}
-
 .title,
 .menubar .row,
 .main .wrap {
@@ -98,36 +64,142 @@ header {
     width: 70%;
 	overflow: hidden;
 	clear: both;
-}
-.main .wrap {
-	margin-bottom: 30px;
-}
-
-.main .row {
-	background-color: #ffffff;
-	padding: 20px;
-	border:  1px dotted $color1;
-	border-top: 0;
-	border-bottom: 5px solid $color1;
-}
-
-
-@media only screen and (max-width: 400px) {
-	.title,
-	.menubar .row,
-	.main .wrap {
+	@media only screen and (max-width: 400px) {
 	    width: 98%;
 	}
 }
 
+#pagetop {
+	width: 100%;
+	background-color: #eeeeee;
+	h1 {
+		color: #333333;
+	}
+	#logo {
+		float: left;
+	}
+	@media only screen and (min-width: 768px) {
+		height: 230px;
+//		position: fixed;
+		header {
+//			bottom: 0;
+//			position: absolute;
+		    width: 100%;
+		}
+	}
+	.title {
+		div {
+			margin: 10px 0;
+			@media only screen and (max-width: 767px) {
+				display: none;
+			}
+		}
+	}
+
+	.menubar {
+		background-color: $menu-bg;
+		ul li {
+			margin: 0;
+		}
+		a {
+			border-right: 1px solid #ffffff;
+			display: block;
+			color: #333333;
+			display: block;
+			padding: 10px 15px;
+			margin: 0 auto;
+			cursor: pointer;
+			text-align: center;
+			@media only screen and (min-width: 1168px) {
+					font-size: 105%;
+					font-weight: bold;
+					width: 110px;
+					padding: 10px 0;
+			}
+		}
+	
+		@media only screen and (max-width: 767px) {
+			width: 100%;
+			&>.row {
+				display: none;
+			}
+		}
+		ul li a:hover {
+			color: #ffffff;
+			background-color: $color1;
+		}
+		li:first-child a {
+			border-left: 1px solid #ffffff;
+		}
+		@media only screen and (max-width: 767px) {
+			li:first-child a,
+			li a {
+				border-width: 0;
+			}
+			li {
+				border-bottom: 1px solid #ffffff;
+			}
+			nav:last-child li:last-child {
+				border: 0;
+			}
+		}
+	}
+}
+
+#title-small {
+	color: #333333;
+	font-size: 28px;
+	position: fixed;
+	height: 0;
+	width: 100%;
+	top: 0;
+	background-color: #eeeeee;
+	.row #inner-small {
+		position: absolute;
+		-webkit-transition: all 0.5s ease-in-out;
+		moz-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;
+		top: -60px;
+	}
+	overflow: hidden;
+	span {
+		position: relative;
+		bottom: 10px;
+	}
+}
+
+.is-sticky #title-small {
+	height: 50px;
+	display: block;
+	.row #inner-small {
+		top: 0;
+	}
+}
 .main {
+	padding-top: 20px;
+	padding-bottom: 40%;
+	.wrap {
+		margin-bottom: 30px;
+	}
+	.row {
+		background-color: #ffffff;
+		padding: 20px;
+		border:  1px dotted $color1;
+		border-top: 0;
+		border-bottom: 5px solid $color1;
+	}
 	img.right {
 		margin: 0 0 10px 10px;
 	}
 	img.left {
 		margin: 0 10px 10px 0;
 	}
+	@media only screen and (min-width: 768px) {
+		padding-top: 20px;
+	}
 	@media only screen and (max-width: 767px) {
+		padding-top: 60px;
 		img.left,
 		img.right {
 			margin: 0 auto;
@@ -136,53 +208,4 @@ header {
 	}
 }
 
-.title .row h1 {
-}
-
-
-.menubar {
-	background-color: $menu-bg;
-	ul li {
-		margin: 0;
-	}
-	a {
-		border-right: 1px solid #ffffff;
-		display: block;
-		color: #333333;
-		display: block;
-		padding: 10px 15px;
-		margin: 0 auto;
-		cursor: pointer;
-		text-align: center;
-	}
-
-	@media only screen and (min-width: 1168px) {
-		a {
-			font-size: 105%;
-			font-weight: bold;
-			width: 110px;
-			padding: 10px 0;
-		}
-	}
-
-	ul li a:hover {
-		color: #ffffff;
-		background-color: $color1;
-	}
-	li:first-child a {
-		border-left: 1px solid #ffffff;
-	}
-	@media only screen and (max-width: 767px) {
-		li:first-child a,
-		li a {
-			border-width: 0;
-		}
-		li {
-			border-bottom: 1px solid #ffffff;
-		}
-		nav:last-child li:last-child {
-			border: 0;
-		}
-	}
-}
 
