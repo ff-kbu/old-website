@@ -12,6 +12,7 @@
 
 		{% javascript jquery-1.11.1.min %}
 		{% javascript jquery.sticky %}
+		{% javascript jquery.smooth-scroll.min %}
 		{% javascript default %}
 
 	</head>
@@ -39,14 +40,20 @@ Kube framework licenced under MIT (http://imperavi.com/kube/)
 		<div id="title-small">
 			<div class="row">
 				<div id="inner-small">
-					{% image logo-small.png" %}
-					<span>
+					{% image logo-small.png %}
+					<span id="text-small">
 					Freifunk KBU
+					</span>
+					<span class="button-mobile">
+					<label for="menu-toggle">
+					{% image menu.png %}
+					</label>
 					</span>
 				</div>
 			</div>
 		</div>
-		<div class="row">
+		<input type="checkbox" id="menu-toggle" style="display: none;" />
+		<div class="row" id="navrow">
 			<nav class="navbar navbar-left">
 				<ul>
 					<li>

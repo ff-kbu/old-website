@@ -39,8 +39,8 @@ h2 {
 
 .anchor {
 	display: block;
-	height: 250px;
-	margin-top: -250px;
+//	height: 250px;
+//	margin-top: -250px;
 	visibility: hidden;
 }
 
@@ -120,11 +120,18 @@ header {
 	
 		@media only screen and (max-width: 767px) {
 			width: 100%;
-			&>.row {
+			#navrow {
 				display: none;
+				.navbar-left {
+					display: none;
+				}
+			}
+			#menu-toggle:checked + #navrow {
+				display: block;
 			}
 		}
-		ul li a:hover {
+		ul li a:hover,
+		ul li a.active {
 			color: #ffffff;
 			background-color: $color1;
 		}
@@ -146,6 +153,20 @@ header {
 	}
 }
 
+
+.button-mobile {
+	label {
+		position: relative;
+		top: 4px;
+		cursor: pointer;
+	}
+	float:right;
+	margin-right: 5px;
+	@media only screen and (min-width: 768px) {
+		display: none;
+	}
+}
+
 #title-small {
 	color: #333333;
 	font-size: 28px;
@@ -163,7 +184,14 @@ header {
 		top: -60px;
 	}
 	overflow: hidden;
-	span {
+	.row {
+		height: 50px;
+		position: relative;
+	}
+	#inner-small {
+		width: 100%;
+	}
+	#text-small {
 		position: relative;
 		bottom: 10px;
 	}
