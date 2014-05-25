@@ -50,6 +50,18 @@ h2 {
 
 .row {
 	overflow: hidden;
+	fieldset {
+		padding: 10px 0 0;
+		border-width: 1px 0;
+		.btn {
+			background-color: #FFB400;
+			color: #333333;
+			&:hover {
+				background-color: #DC0067;
+				color: #ffffff;
+			}
+		}
+	}
 }
 
 header {
