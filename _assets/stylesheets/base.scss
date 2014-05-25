@@ -111,6 +111,7 @@ header {
 	}
 
 	.menubar {
+		z-index: 100;
 		background-color: $menu-bg;
 		ul li {
 			margin: 0;
@@ -183,6 +184,7 @@ header {
 
 #title-small {
 	color: #333333;
+	z-index: 100;
 	font-size: 28px;
 	position: fixed;
 	height: 0;
