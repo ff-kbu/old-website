@@ -4,7 +4,7 @@ wikilink: //kbu.freifunk.net/wiki/
 maplink: http://map.kbu.freifunk.net/geomap.html
 markdown: redcarpet
 include: ['.htaccess']
-pygments: true
+highlighter: 'pygments'
 image:
     source: _assets/images/original
     output: generated
