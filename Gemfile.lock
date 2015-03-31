@@ -109,7 +109,6 @@ DEPENDENCIES
   jekyll-assets
   jekyll-multiple-languages-plugin
   mini_magick
-  pygments.rb
   redcarpet
   sass (= 3.2.5)
   therubyracer
