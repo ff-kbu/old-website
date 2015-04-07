@@ -2,12 +2,15 @@
 layout: default
 title: Freifunk Köln, Bonn und Umgebung - Blog
 ---
-<div class="main">
-	{% for post in site.posts %}
-		<div class="wrap">
-			<div class="row">
-				<a href="{{ post.url }}">{{ post.author }}{{ post.title }}</a>
-	  		</div>
+<h2>Blog</h2>
+{% for post in site.posts limit:1 %}
+	<div class="row">
+		<div class="blogheader">
+			<span>
+				{{ post.author }}, {{ post.date | date: "%-d %B %Y" }}
+			</span>
+			<h3>{{ post.title }}</h3>
 		</div>
-	{% endfor %}
-</div>
+		{{ post.content }}
+	</div>
+{% endfor %}

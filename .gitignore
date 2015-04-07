@@ -1,2 +1,4 @@
 publish.sh
 _site
+.sass-cache
+

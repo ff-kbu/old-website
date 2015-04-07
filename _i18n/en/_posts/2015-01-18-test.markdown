@@ -1,0 +1,16 @@
+---
+layout: default
+title: "A new blog"
+author: "Piek2tei"
+date: 2015-04-03 14:00:00
+---
+#### Propaganda incoming...
+We’re starting a blog. From time to time, we’re going to deal with different issues all around Freifunk and the KBU-community. Posts are going to appear infrequently.
+
+- This blog is jekyll based. If you’re interested in blogging, file a pull-request for <a href="https://github.com/ff-kbu/website">https://github.com/ff-kbu/website</a>
+- It’s not translated by default. Posts will in English (mostly) or German. Hardly anybody will take care of translating ‘em all.
+- It’s opinionated and does not reflect a consensus within our community.</li>
+
+Due to technical limitations of jekyll, there will be no comments. Join the <a href="#kontakt">maillist</a> if you’re up for discussing things and thinkings.
+
+Cheers, Piek2tei
