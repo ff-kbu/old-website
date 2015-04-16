@@ -1,0 +1,12 @@
+<h2>Blog</h2>
+{% for post in site.posts limit:1 %}
+	<div class="row">
+		<div class="blogheader">
+			<span>
+				{{ post.author }}, {{ post.date | date: "%-d %B %Y" }}
+			</span>
+			<h3>{{ post.title }}</h3>
+		</div>
+		{{ post.content }}
+	</div>
+{% endfor %}
