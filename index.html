@@ -3,27 +3,42 @@ layout: default
 title: Freifunk Köln, Bonn und Umgebung
 ---
 <div class="main">
-	<div class="units-row">
-
 	<div class="wrap">
-	  	{%include blog.html%}
+
 	</div>
 
+
 	<div class="wrap">
-      <span class="anchor scrollPos pos0" id="ueber"></span>
-	  {%tf index/ueber.html%}
+		<div class="units-row units-split">
+
+
+			<div class="unit-40 unit-push-right">
+				{%include blog.html%}
+			</div>
+
+
+			<div class="unit-60 unit-push-left">
+
+
+
+				<span class="anchor scrollPos pos0" id="ueber"></span>
+				{%tf index/ueber.html%}
+
+		    <span class="anchor scrollPos pos1" id="mitmachen"></span>
+			  {%tf index/mitmachen.html%}
+
+			  <span class="anchor scrollPos pos2" id="kontakt"></span>
+			  {%tf index/kontakt.html%}
+
+				<span class="anchor scrollPos pos3" id="impressum"></span>
+				{%tf index/impressum.html%}
+			</div>
+
+
+		</div>
 	</div>
-	<div class="wrap">
-      <span class="anchor scrollPos pos1" id="mitmachen"></span>
-	  {%tf index/mitmachen.html%}
-	</div>
-	<div class="wrap">
-	  <span class="anchor scrollPos pos2" id="kontakt"></span>
-	  {%tf index/kontakt.html%}
-	</div>
-	<div class="wrap">
-		<span class="anchor scrollPos pos3" id="impressum"></span>
-		{%tf index/impressum.html%}
-	</div>
+</div>
+
+
 
 </div>
