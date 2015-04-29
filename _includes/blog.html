@@ -1,6 +1,6 @@
 <h2>Blog</h2>
 {% for post in site.posts limit:5 %}
-	<article>
+	<article {% if forloop.last %} class='hidemobile'{% endif %}>
 
 		<div class="row">
 			<div class="blogheader">
@@ -17,4 +17,10 @@
 
 		</div>
 	</article>
+	{% if forloop.last == false %}
+		<div class="blockspacer">
+		</div>
+	{% endif %}
 {% endfor %}
+{% capture link1 %}{{ site.baseurl }}/blog.html{% endcapture %}
+	<a href="{{ link1 }}" >Alles</a>

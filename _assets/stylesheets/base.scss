@@ -29,12 +29,16 @@ body {
 	padding-bottom: 30px;
 }
 
-h2 {
+h2,
+.blockspacer {
 	background-color: $header-bg;
 	color: #ffffff;
 	padding: 10px 20px;
 	margin-bottom: 0;
 	font-size: 22px;
+}
+.blockspacer {
+	margin-top: 22px;
 }
 .blogheader {
 	span {
@@ -282,5 +286,8 @@ header {
 	    float: none;
 	    margin-left: 0px;
 	    margin-bottom: 1.6em;
+	}
+	.hidemobile {
+		display: none;
 	}
 }

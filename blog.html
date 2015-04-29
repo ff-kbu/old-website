@@ -14,20 +14,24 @@ title: Freifunk Köln, Bonn und Umgebung - Blog
 		<div class="units-row units-split">
 
 			<div class="unit-100 unit-push-left content">
-
+				<h2>Blog</h2>
 				{% for post in site.posts %}
 					<article>
-						<h2>{{ post.title }}</h2>
 						<div class="row">
 						<div class="blogheader">
 							<span>
 								{{ post.author }}, {{ post.date | date: "%-d %B %Y" }}
 							</span>
+						<h3>{{ post.title }}</h3>
 						</div>
 
 						{{ post.content }}
 						</div>
 					</article>
+					{% if forloop.last == false %}
+						<div class="blockspacer">
+						</div>
+					{% endif %}
 				{% endfor %}
 
 
