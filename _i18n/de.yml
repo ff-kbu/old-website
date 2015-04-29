@@ -1,6 +1,7 @@
 global:
   englisch: english
   deutsch: deutsch
+  fullarticle: ganzer Beitrag
 default_layout:
   ueber: Über
   mitmachen: Mitmachen

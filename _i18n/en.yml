@@ -1,7 +1,7 @@
 global:
   englisch: english
   deutsch: german
-
+  fullarticle: full article
 default_layout:
   ueber: About
   mitmachen: Join

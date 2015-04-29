@@ -151,7 +151,7 @@ header {
 			#navrow {
 				display: none;
 				.navbar-left {
-					display: none;
+				/*display: none;*/
 				}
 			}
 			#menu-toggle:checked + #navrow {
@@ -262,6 +262,18 @@ header {
 			margin: 0 auto;
 			display: block;
 		}
+	}
+}
+
+.content section,
+.marginala article {
+	padding-bottom: 22px;
+}
+
+.marginal {
+	padding-left: 20px;
+	@media (max-width: 1000px) {
+		padding-left: 0;
 	}
 }
 @media (max-width: 1000px) {
