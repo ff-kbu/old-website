@@ -14,3 +14,14 @@ image:
         medium:
             width: 300
             height: 260
+defaults:
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # automatically set is_post=true for all posts
+
+
+baseurl: ""
+permalink: /:year/:month/:title/

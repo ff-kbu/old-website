@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+gem 'nokogiri'
+gem 'iconv'
 gem 'sass', '=3.2.5'
 gem 'redcarpet'
 gem 'jekyll-assets'

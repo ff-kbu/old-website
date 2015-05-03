@@ -14,7 +14,7 @@ title: Freifunk Köln, Bonn und Umgebung - Blog
 		<div class="units-row units-split">
 
 			<div class="unit-100 unit-push-left content">
-				<h2>Blog</h2>
+				<h1 class="blockheader">Blog</h1>
 				{% for post in site.posts %}
 					<article>
 						<div class="row">
@@ -22,10 +22,10 @@ title: Freifunk Köln, Bonn und Umgebung - Blog
 							<span>
 								{{ post.author }}, {{ post.date | date: "%-d %B %Y" }}
 							</span>
-						<h3>{{ post.title }}</h3>
+						<h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
 						</div>
 
-						{{ post.content }}
+						{{ post.content | convert_header: 2 }}
 						</div>
 					</article>
 					{% if forloop.last == false %}

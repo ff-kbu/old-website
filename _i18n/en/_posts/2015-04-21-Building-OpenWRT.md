@@ -4,7 +4,7 @@ title: "Building OpenWRT"
 author: "yanosz"
 date: 2015-04-21 21:00:00
 ---
-#### What is this about?
+# What is this about?
 Freifunk Firmware is distributed via firmware image files - usually. It's plug and play for the user: Fire up a browser, open your router's WebUI, upload a it and you're done. But how to create theses images? Is there room for tinkering?
 Usually, every Freifunk-Firmware uses OpenWRT / Linux. Thats the big common ground for all networks out there.
 
@@ -13,7 +13,7 @@ Usually, every Freifunk-Firmware uses OpenWRT / Linux. Thats the big common grou
 OpenWRT is a specialized Linux distribution focusing on wifi routers - but out-of-the stock releases builds cannot be used, 'cause every community must ship their network configuration. This blog post explains how to create custom firmware images. It provides a detailed view on http://wiki.openwrt.org/doc/howto/obtain.firmware while having Freifunk in mind.
 
 
-####Make It - The Buildroot
+#Make It - The Buildroot
 OpenWRT features a build system (aka Buildroot - http://wiki.openwrt.org/doc/howto/build). It is used to build OpenWRT from source, completely. I use it like this:
 {% highlight bash %}
 $ git clone git://git.openwrt.org/openwrt.git
@@ -29,7 +29,7 @@ Afterwards, firmware images will be in <code>./bin/</code> - Keep calm and carry
 
 Note that all selected packages will be installed in each firmware image file: If you select USB-drivers, they will be available on models without USB. If you skip 'em, they'll be missing on models having USB.
 
-####Alternatives
+#Alternatives
 Using the Buildroot is annoying. You have to wait a looooong time for the build to finish. Each and every dependency is downloaded, checked, extracted, built and installed. If one thing screws up, the build breaks.
 But there's more. If you try to install OpenWRT's packages on machines running your build, you may run into trouble.
 {% highlight bash %}
@@ -56,7 +56,7 @@ Both are created when compiling the Buildroot. Furthermore, they're included in 
 
 
 
-##### The OpenWRT SDK
+## The OpenWRT SDK
 The SDK is used for building packages - in contrast to complete firmware files. Starting with OpenWRT 14.07 (Barrier Breaker) it is possible to build kernel packages, too. Platform-dependent, binary versions are provided by OpenWRT for their stock releases.
 
 Let’s compile a pre-release of olsr v2 (tag: v0.7.1) to be used on a TP-Link WR841n:
@@ -69,7 +69,7 @@ $ make world
 {% endhighlight %}
 Looking into <code>./ar71xx/packages/base</code>, there's a complete <a href="http://wiki.openwrt.org/doc/techref/opkg">opkg-feed</a>. Just copy it to a web server, put it in your router's <code>/etc/opkg.conf</code> and use it.
 
-#####Image Builder
+##Image Builder
 
 The Image Builder is for creating firmware images to be uploaded on routers. Sometimes it's called Image Generator. It's for post-processing a Buildroot-output - such as an OpenWRT stock release. You can select packages and files to be included. Creating a minimal image including the previous olsr v2 build for a TP-Link WR841n works like this:
 {% highlight bash %}
@@ -81,7 +81,7 @@ $  make image PROFILE=TLWR841 PACKAGES="olsrv2"
 {% endhighlight %}
 Result is: <code>./bin/ar71xx/openwrt-ar71xx-generic-tl-wr841n*</code>. Keep in mind that <code>make profile</code> gives a list of all available profiles for the sdk's platform. There are generic ones, too.
 
-#### Summary
+# Summary
 OpenWRT's build system appears redundant. Both SDK and Image Builder do serve their purpose and have justified use cases.
 For generating Freifunk-Firmware, SDK + Imagebuilder seem to be a reasonable choice: Software packages released by OpenWRT can be used and post-processing allows including USB-drivers only for models having USB. Building a non-released version of OpenWRT (trunk, stable branch) seems to be one of the few cases, where you actually need the Buildroot.
 

@@ -4,7 +4,7 @@ title: "A new blog"
 author: "Piek2tei"
 date: 2015-04-03 14:00:00
 ---
-#### Propaganda incoming...
+# Propaganda incoming...
 We’re starting a blog. From time to time, we’re going to deal with different issues all around Freifunk and the KBU-community. Posts are going to appear infrequently.
 
 - This blog is jekyll based. If you’re interested in blogging, file a pull-request for <a href="https://github.com/ff-kbu/website">https://github.com/ff-kbu/website</a>
