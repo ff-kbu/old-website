@@ -73,6 +73,9 @@
 							<li>
 								<a href="{{ link1 }}#impressum">{% t default_layout.impressum %}</a>
 							</li>
+							<li>
+								<a href="{{ site.baseurl }}/blog.html"{{ if page.pageid == 'blog' }} class="active"{{ endif }}>Blog</a>
+							</li>
 						</ul>
 					</nav>
 					<nav class="navbar navbar-right">
@@ -88,6 +91,7 @@
 				</div>
 			</header>
 		</div>
+
 
 
 		{% if page.is_post == true %}
@@ -116,5 +120,6 @@
 			{{ content }}
 		{% endif %}
 
+		<!-- rendered: {% render_time %} -->
 	</body>
 </html>

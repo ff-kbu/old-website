@@ -11,13 +11,15 @@ $(document).ready(function(){
 			var target = $(this).attr('href');
 			target = target.split('#');
 			target = target[1];
-			$(this).on('click', function() {
-				$.smoothScroll({
-					// offset: -110,
-					scrollTarget: '#' + target
+			if (typeof target != 'undefined'){
+				$(this).on('click', function() {
+					$.smoothScroll({
+						offset: 20,
+						scrollTarget: '#' + target
+					});
+					return false;
 				});
-				return false;
-			});
+			}
 		}
 	});
 

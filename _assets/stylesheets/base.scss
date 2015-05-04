@@ -63,7 +63,7 @@ body {
 //	margin-top: -250px;
 	visibility: hidden;
 	position: relative;
-	top: -110px;
+	top: -130px;
 }
 
 .navbar {
@@ -271,7 +271,7 @@ header {
 		padding-top: 20px;
 	}
 	@media only screen and (max-width: 767px) {
-		padding-top: 60px;
+		padding-top: 0px;
 		img.left,
 		img.right {
 			margin: 0 auto;

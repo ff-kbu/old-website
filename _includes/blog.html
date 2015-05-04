@@ -18,9 +18,7 @@
 		</div>
 	</article>
 	{% if forloop.last == false %}
-		<div class="blockspacer">
+		<div class="blockspacer hidemobile">
 		</div>
 	{% endif %}
 {% endfor %}
-{% capture link1 %}{{ site.baseurl }}/blog.html{% endcapture %}
-	<a href="{{ link1 }}" >Alles</a>
