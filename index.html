@@ -1,29 +1,37 @@
 ---
 layout: default
+layoutmode: h1inheader
 title: Freifunk Köln, Bonn und Umgebung
 ---
 <div class="main">
-	<div class="units-row">
-
 	<div class="wrap">
-	  	{%include blog.html%}
-	</div>
-
-	<div class="wrap">
-      <span class="anchor scrollPos pos0" id="ueber"></span>
-	  {%tf index/ueber.html%}
 	</div>
 	<div class="wrap">
-      <span class="anchor scrollPos pos1" id="mitmachen"></span>
-	  {%tf index/mitmachen.html%}
+		<div class="units-row units-split">
+			<div class="unit-40 unit-push-right marginal">
+				{%include blog.html%}
+			</div>
+			<div class="unit-60 unit-push-left content">
+				<section>
+					<span class="anchor scrollPos pos0" id="ueber"></span>
+					{%tf index/ueber.html%}
+				</section>
+				<section>
+		    	<span class="anchor scrollPos pos1" id="mitmachen"></span>
+			  	{%tf index/mitmachen.html%}
+				</section>
+				<section>
+			  	<span class="anchor scrollPos pos2" id="kontakt"></span>
+			  	{%tf index/kontakt.html%}
+				</section>
+				<section>
+					<span class="anchor scrollPos pos3" id="impressum"></span>
+					{%tf index/impressum.html%}
+				</section>
+			</div>
+		</div>
 	</div>
-	<div class="wrap">
-	  <span class="anchor scrollPos pos2" id="kontakt"></span>
-	  {%tf index/kontakt.html%}
-	</div>
-	<div class="wrap">
-		<span class="anchor scrollPos pos3" id="impressum"></span>
-		{%tf index/impressum.html%}
-	</div>
-
 </div>
+<script>
+var ishome = true;
+</script>

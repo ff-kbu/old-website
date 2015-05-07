@@ -1,12 +1,24 @@
-<h2>Blog</h2>
-{% for post in site.posts limit:1 %}
-	<div class="row">
-		<div class="blogheader">
-			<span>
-				{{ post.author }}, {{ post.date | date: "%-d %B %Y" }}
-			</span>
-			<h3>{{ post.title }}</h3>
+<h2 class="blockheader">Blog</h2>
+{% for post in site.posts limit:5 %}
+	<article {% if forloop.last %} class='hidemobile'{% endif %}>
+
+		<div class="row">
+			<div class="blogheader">
+				<span>
+					{{ post.author }}, {{ post.date | date: "%-d %B %Y" }}
+				</span>
+				<h3>{{ post.title }}</h3>
+			</div>
+			{{ post.content | split:'<!--break-->' | first | | convert_header: 3 }}
+
+				<a href="{{ site.baseurl }}{{ post.url }}">{% t global.fullarticle %}</a>
+			{% if post.content contains '<!--break-->' %}
+			{% endif %}
+
 		</div>
-		{{ post.content }}
-	</div>
+	</article>
+	{% if forloop.last == false %}
+		<div class="blockspacer hidemobile">
+		</div>
+	{% endif %}
 {% endfor %}

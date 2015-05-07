@@ -16,75 +16,110 @@
 		{% javascript default %}
 
 	</head>
-<body class="kubepage">
-<!--
-Website for Freifunk Köln, Bonn und Umgebung
-Sources: http://gitorious.datentonne.net/ff-kbu/website/
-Licensed under WTFPL (Licence included in Repo)
-Kube framework licenced under MIT (http://imperavi.com/kube/)
--->
-	<div class="wrap" id="pagetop">
-	<div class="title">
-		<span class="lang_select">
-			<a href="{{ page.url }}" >{% t global.deutsch %}</a> •
-			<a href="/en/{{ page.url }}" >{% t global.englisch %}</a>
-		</span>
-		<div class="row units-row">
-			<div id="logo">
-			{% image logo.png" %}
-			</div>
-			<h1 class="">Freifunk Köln, Bonn und Umgebung</h1>
-		</div>
-	</div>
-	<header class="group menubar">
-		<div id="title-small">
-			<div class="row">
-				<div id="inner-small">
-					{% image logo-small.png %}
-					<span id="text-small">
-					Freifunk KBU
-					</span>
-					<span class="button-mobile">
-					<label for="menu-toggle">
-					{% image menu.png %}
-					</label>
-					</span>
+	<body class="kubepage">
+	<!--
+	Website for Freifunk Köln, Bonn und Umgebung
+	Sources: http://gitorious.datentonne.net/ff-kbu/website/
+	Licensed under WTFPL (Licence included in Repo)
+	Kube framework licenced under MIT (http://imperavi.com/kube/)
+	-->
+		<div class="wrap" id="pagetop">
+			<div class="title">
+				<span class="lang_select">
+					<a href="{{ page.url }}" >{% t global.deutsch %}</a> •
+					<a href="/en/{{ page.url }}" >{% t global.englisch %}</a>
+				</span>
+				<div class="row units-row">
+					<div id="logo">
+					{% image logo.png" %}
+					</div>
+					{% if page.layoutmode == 'h1inheader' %}
+					<h1 class="pagetitle">Freifunk Köln, Bonn und Umgebung</h1>
+					{% else %}
+					<span class="pagetitle">Freifunk Köln, Bonn und Umgebung</span>
+					{% endif %}
 				</div>
 			</div>
+			<header class="group menubar">
+				<div id="title-small">
+					<div class="row">
+						<div id="inner-small">
+							{% image logo-small.png %}
+							<span id="text-small">
+							Freifunk KBU
+							</span>
+							<span class="button-mobile">
+							<label for="menu-toggle">
+							{% image menu.png %}
+							</label>
+							</span>
+						</div>
+					</div>
+				</div>
+				<input type="checkbox" id="menu-toggle" style="display: none;" />
+				{% capture link1 %}{{ site.baseurl }}/index.html{% endcapture %}
+				<div class="row" id="navrow">
+					<nav class="navbar navbar-left">
+						<ul>
+							<li>
+								<a href="{{ link1 }}#ueber">{% t default_layout.ueber %}</a>
+							</li>
+							<li>
+								<a href="{{ link1 }}#mitmachen">{% t default_layout.mitmachen %}</a>
+							</li>
+							<li>
+								<a href="{{ link1 }}#kontakt">{% t default_layout.kontakt %}</a>
+							</li>
+							<li>
+								<a href="{{ link1 }}#impressum">{% t default_layout.impressum %}</a>
+							</li>
+							<li>
+								<a href="{{ site.baseurl }}/blog.html"{{ if page.pageid == 'blog' }} class="active"{{ endif }}>Blog</a>
+							</li>
+						</ul>
+					</nav>
+					<nav class="navbar navbar-right">
+						<ul>
+							<li>
+								<a href="{{ site.wikilink }}">{% t default_layout.wiki %}</a>
+							</li>
+							<li>
+								<a href="{{ site.maplink }}">{% t default_layout.karte %}</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
 		</div>
-		<input type="checkbox" id="menu-toggle" style="display: none;" />
-		<div class="row" id="navrow">
-			<nav class="navbar navbar-left">
-				<ul>
-					<li>
-						<a href="#ueber">{% t default_layout.ueber %}</a>
-					</li>
-					<li>
-						<a href="#mitmachen">{% t default_layout.mitmachen %}</a>
-					</li>
-					<li>
-						<a href="#kontakt">{% t default_layout.kontakt %}</a>
-					</li>
-					<li>
-						<a href="#impressum">{% t default_layout.impressum %}</a>
-					</li>
-				</ul>
-			</nav>
-			<nav class="navbar navbar-right">
-				<ul>
-					<li>
-						<a href="{{ site.wikilink }}">{% t default_layout.wiki %}</a>
-					</li>
-					<li>
-						<a href="{{ site.maplink }}">{% t default_layout.karte %}</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-</div>
 
-		  {{ content }} 
 
+
+		{% if page.is_post == true %}
+			<div class="main">
+				<div class="wrap">
+				</div>
+				<div class="wrap">
+					<div class="units-row units-split">
+						<div class="content">
+							<section>
+								<h1 style="blockheader">{{ site.posts[0].title }}</h1>
+								<div class="row">
+									<div class="blogheader" style="border: none;">
+										<span>
+											{{ site.posts[0].author }}, {{ site.posts[0].date | date: "%-d %B %Y" }}
+										</span>
+									</div>
+									{{ content | convert_header: 1 }}
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+		{% else %}
+			{{ content }}
+		{% endif %}
+
+		<!-- rendered: {% render_time %} -->
 	</body>
 </html>

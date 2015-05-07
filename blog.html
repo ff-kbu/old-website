@@ -1,16 +1,44 @@
 ---
 layout: default
+pageid: blog
 title: Freifunk Köln, Bonn und Umgebung - Blog
 ---
-<h2>Blog</h2>
-{% for post in site.posts limit:1 %}
-	<div class="row">
-		<div class="blogheader">
-			<span>
-				{{ post.author }}, {{ post.date | date: "%-d %B %Y" }}
-			</span>
-			<h3>{{ post.title }}</h3>
-		</div>
-		{{ post.content }}
+
+
+
+
+<div class="main">
+	<div class="wrap">
 	</div>
-{% endfor %}
+
+	<div class="wrap">
+		<div class="units-row units-split">
+
+			<div class="unit-100 unit-push-left content">
+				<h1 class="blockheader">Blog</h1>
+				{% for post in site.posts %}
+					<article>
+						<div class="row">
+						<div class="blogheader">
+							<span>
+								{{ post.author }}, {{ post.date | date: "%-d %B %Y" }}
+							</span>
+						<h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+						</div>
+
+						{{ post.content | convert_header: 2 }}
+						</div>
+					</article>
+					{% if forloop.last == false %}
+						<div class="blockspacer">
+						</div>
+					{% endif %}
+				{% endfor %}
+
+
+			</div>
+
+
+		</div>
+	</div>
+</div>
