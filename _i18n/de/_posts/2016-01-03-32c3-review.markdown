@@ -1,0 +1,21 @@
+---
+layout: default
+title: "32c3 Review"
+author: "kevin"
+date: 2016-01-03 04:00:00
+---
+Hey,
+
+leider ist nun der #32c3 vorbei und wir haben soweit nun alle denn Input verarbeitet. So dass wir das ganze mal in einem Blogeintrag niederschreiben können.
+Wir haben uns der Freifunk Assembly angeschlossen und so sehr viele Kontakte zu den anderen Communities herstellen können.
+Für alle von uns die vor Ort waren, waren es spannende Tage mit sehr viel "Input". Wie einige von euch auf der Mailingliste mitbekommen haben, gab es diesmal eine Support Hotline die sehr rege für so einige $dinge genutzt wurde! 24/4 besetzung hat nicht geklappt, teils menschlich, teils technisch :-D Auch haben wir erstmals unser Blech Omni in die Congress Colo gesteckt, der dann zu einem Supernode für das KBU Netz inkl. grösstem Tor Exit beim Congress (Tor Fingerprint schon Monate vorher gespawned :) umfunktioniert. Wofür hat der Congress sonst so eine tolle Bandbreite?
+
+Eines der tollsten Dinge, waren die Abstecher in die Lounge...... Um es zu verstehen seid beim 33c3 dabei, wenn man die Lounge ueberhaupt denn findet! :-P
+
+Es gab auch sehr viele spannende Talks die ihr alle unter https://media.ccc.de/b/congress/2015 schauen könnt. Wir haben es selbst nicht in viele Talks geschafft da, das Leben an der Freifunk Assebly um einiges spannender war. CHAOS CHAOS CHAOS :-D
+
+Ich haben nun eine kleine Einführung in BGP und IPTABLES erhalten, die mir nun endlich die Anbindung an den Freifunk Rheinland AS ermöglicht hat. Sobald wir auch endlich GRE Tunnel für die restlichen Supernodes bekommen, können wir diese auch umstellen. Wie jedes Jahr ging wieder eine Seuche herum, die uns allen Energie geklaut hat.
+Ich hoffe dass, wir in Zukunft noch einige innovative dinge hier tun können und Spass an der Technik haben werden. Ich denke das sollte für uns alle das Wichtigste sein! Wir haben mittlerweile über 500 Nodes im Netz und es wird nicht weniger werden. Auch müssen wir mehr Menschen für die Technik begeistern, die auch offen sind, nicht gewohnte Tools zu erlernen, damit sie aktiv am Projekt mitwirken können und ihre Ideen einfließen lassen!
+
+Gruß
+Kevin
