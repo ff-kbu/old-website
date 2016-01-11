@@ -6,7 +6,7 @@ date: 2016-01-08 21:00:00
 ---
 Hi folks,
 
-today (in the very early morning) we've got the news that a new firmware release was prepared by the h@ckers among us.
+last week on thursday (in the very early morning) we've got the news that a new firmware release was prepared by the h@ckers among us.
 
 Along with bugfixes and adjustments the new release implements the region split of the actual KBU network into "Hoods". The raise of nodes in the network necessitate this step. We think that in that way the network will grow much more smoothly. Thatswhy we recommend you to upgrade your nodes or using only the new release for setting up new nodes.
 
