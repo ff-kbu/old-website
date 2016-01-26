@@ -237,8 +237,11 @@ uci -q batch <<EOF
 	set dhcp.freifunk.leasetime='10m'
     set dhcp.freifunk.dhcpv6='disabled'
 	set dhcp.freifunk.ra='disabled'
-	set dhcp.freifunk.dhcp_option='6,172.27.255.3' # Freifunk-KBU Anycast DNS
+	set dhcp.freifunk.dhcp_option='6,172.27.255.3' # Freifunk-KBU: Paul
 	commit dhcp
+
+    set batman-adv.bat0.gw_mode='server'            # Batman-adv: Router ist Server, da DHCP
+    commit batman-adv
 
 	add firewall rule 
 	
