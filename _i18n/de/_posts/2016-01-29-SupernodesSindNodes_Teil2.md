@@ -79,12 +79,12 @@ Kurz und knapp - meine Antworten:
 
 Wenn Du zustimmst, dann:
 
-- Bau Deinen Supernode. Bau den eigenes Freifunk-Netz im Freifunk-Netz (Teil 1)
-- Erzähl Leuten davon und verbreite das Wissen. Schreib' Wiki-Seiten oder Blogs
-- Forsche und fordere die Technik heraus: Entwickle Deinen Supernode weiter
+- Bau Deinen Supernode. Bau Dein eigenes Freifunk-Netz im Freifunk-Netz (Teil 1).
+- Erzähl Leuten davon und verbreite das Wissen. Schreib' Wiki-Seiten oder Blogs.
+- Forsche und fordere die Technik heraus: Entwickle Deinen Supernode weiter.
 
 ## Fazit 
 
-Du musst Dich entscheiden, welches Netz Du baust und was Dir dabei wichtig ist. 
+Du musst Dich entscheiden, wie Du Freifunk machst baust und was Dir dabei wichtig ist. 
 
 Ich hab' Dir erzählt, wie die Dinge funktionieren und hoffe, Du hast Blut geleckt. Ideen zur Weiterentwicklung, zum Testen und Forschen gibt's dann in Teil 3 dieser Blog-Serie.
