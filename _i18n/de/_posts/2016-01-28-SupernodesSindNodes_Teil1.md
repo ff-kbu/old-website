@@ -213,7 +213,7 @@ Leider ist die Seite zur Zeit nicht aktuell - frag einfach auf der Mailingliste 
 
 Ich verwende hier *172.27.8.0/25, d.h. 172.27.8.0 - .127*. Das musst Du anpassen.
 
-Die IP-Adresse musst Du auf dem Freifunk-Interface konfigurieren. Da das Gerät nun routed (https://github.com/franknord/node-scripts/blob/master/supernode/02_ip_addresses.sh ).
+Die IP-Adresse musst Du auf dem Freifunk-Interface konfigurieren, da das Gerät nun routed (https://github.com/franknord/node-scripts/blob/master/supernode/02_ip_addresses.sh ).
 {% highlight bash %}
 uci -q batch <<EOF
 		set network.freifunk.proto='static'
@@ -260,7 +260,7 @@ EOF
 
 ### 4. Policy Routing einrichten
 
-Da Traffic aus dem Mesh anders routed werden soll als lokaler traffic, müssen Policies definiert werden.
+Da Traffic aus dem Mesh anders routed werden soll als lokaler Traffic, müssen Policies definiert werden.
 Der genutzte IP-Adressbereich muss wieder angepasst werden (https://github.com/franknord/node-scripts/blob/master/supernode/04_routing.sh ).
 {% highlight bash %}
 uci -q batch <<EOF
@@ -270,8 +270,8 @@ uci -q batch <<EOF
 	set network.@rule[-1].in='freifunk'
 	set network.@rule[-1].lookup='66'
 
-	set network.@rule[-3].dest='172.27.8.0/25' # Anpassen!
-	set network.@rule[-3].lookup='66'
+	set network.@rule[-2].dest='172.27.8.0/25' # Anpassen!
+	set network.@rule[-2].lookup='66'
 	commit network
 EOF
 /etc/init.d/network restart
