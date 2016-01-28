@@ -49,6 +49,16 @@ Dennoch hängt der komplette Freifunk-Betrieb im Köln-Bonner-Raum an ca. 3-4 Su
 
 Wissen wird kaum vermittelt - Forschung findet nicht statt. Im Fokus ist der kostenlose Zugang zum Internet. Das hat nur noch wenig mit Erfa-Arbeit zu tun.  Der Stand bei Freifunk-KBU ist das Ergebnis einer Entwicklung und er wird aktuell nicht wirklich in Frage gestellt. 
 
+## Gluon 
+
+Vor kurzem wurde Gluon im Netz der KBU eingeführt. Die Umstellung auf Gluon, die Lübecker Firmware sei gelungen. Die Migration verlaufe erfolgreich.
+
+Technisch hat sich wenig geändert. Die KBU verwendet seit ihrem Bestehen einen Fork der Lübecker Freifunk-Firmware. Grundlage ist nach wie vor batman-adv auf fastd-Tunneln. Ein paar Neueurungen wurden übernommen: Shellscripts erweitern das OpenWRT Buildsystem. Ein alfred-Server existiert nun neben dem Register-Server, die collectd-Statistiken werden nicht mehr gepflegt und die Software liegt in neuren Versionen vor. Die Änderungen beteffen also Details.
+
+Das Verständnis hat sich aber geändert. Gluon wurde eingeführt wie SAP - das Standardprodukt für Freifunk-Netze wird nun eingesetzt. Es gab keine Diskussion welche Features aus dem Lübecker Upstream übernommen werden. Es gab keine Diskussion zu Features, die nicht in Gluon enthalten sind. Neben der Gluon-Firmware wird die Gluon Map eingesetzt. batman-adv VIS-Daten und Register-Informationen werden ausgeblendet. 
+
+Kurzum: Die Gluon-Umstellung betrifft die Mentalität und nicht die Technik.
+
 ## Freifunk Richtig und Wahr
 
 Es ist kompliziert. Niemand sagt, dass dieser Freifunk „falscher Freifunk” ist oder jenes Netz stinkt. Konsenz bei Freifunk ist das *Pico Peering Agreement*. Es wird im KBU-Netz umgesetzt. Wie bei allen anderen Freifunk-Communities.
@@ -57,7 +67,9 @@ Bei KBU engagieren sich viele Menschen dafür, freies Internet in öffentlichen 
 
 Dennoch muss sich die Freifunk-KBU Community entscheiden, welchen technischen Konsequenzen aus der Ausrichtung entstehen. Viele Entscheidungen (fester Funkkanal zum Meshing, Roaming über weite Gebiete) beeinträchtigen die WLAN- und Internet-Geschwindigkeit stark. Die Überlastung der KBU-Supernodes wäre auch so evtl. vermeidbar. 
 
-Auch ist das Wachstum in der KBU-Community sehr beschränkt: Nur wenige werden Super-Nodes betreiben können, wenn die Hürde hoch ist, Dokumentation fehlt und Wissen nicht aktiv und progressiv vermittelt wird.
+Das Wachstum ist beschränkt. Nur wenige werden Super-Nodes betreiben können, wenn die Hürde hoch ist, Dokumentation fehlt und Wissen nicht aktiv und progressiv vermittelt wird.
+
+Gluon löst damit keine Probleme. Die Shell-Scripts, Pakete und DSL im neuen Buildsystem schaffen zusätzliche Komplexität. Die Konfiguration ist noch schwerer durchschauhbar.
 
 ### Unvereinbare Positionen?
 
@@ -79,12 +91,26 @@ Kurz und knapp - meine Antworten:
 
 Wenn Du zustimmst, dann:
 
-- Bau Deinen Supernode. Bau Dein eigenes Freifunk-Netz im Freifunk-Netz (Teil 1).
+- Bau Deinen Supernode. Bau Dein eigenes Freifunk-Netz im Freifunk-Netz.
 - Erzähl Leuten davon und verbreite das Wissen. Schreib' Wiki-Seiten oder Blogs.
 - Forsche und fordere die Technik heraus: Entwickle Deinen Supernode weiter.
 
 ## Fazit 
 
-Du musst Dich entscheiden, wie Du Freifunk machst baust und was Dir dabei wichtig ist. 
+Vor kurzem wurde das Netzwerk in drei Segmente eingeteilt. Es besteht aus den Hoods Köln, Bonn, Umgebung. Die Last auf den Supernodes wurde wieder geringer - 1/3 weniger Broadcast-Pakete werden versendet. So war es bereits bei Einführung des no-rebroadcast-Patches. Das Netz konnte für ein paar Monate stabilisiert werden. 
 
-Ich hab' Dir erzählt, wie die Dinge funktionieren und hoffe, Du hast Blut geleckt. Ideen zur Weiterentwicklung, zum Testen und Forschen gibt's dann in Teil 3 dieser Blog-Serie.
+Die KBU-Supernodes betreiben nun drei Netze. Einrichtung und Setup wurden komplexer. Die Netze hängen an den gleichen zentralen Server und werden vom Admin-Team verwaltet. Gluon ist technisch komplexer als die Classic-Firmware und damit schwerer zu debuggen und zu verstehen.
+
+Die Sitation im KBU-Netz ist das Ergebnis einer Entwicklung. Sie wird bislang nicht in Frage gestellt.
+
+*Ich fange mal damit an*:
+
+- *Accesspoints* sind kleinere Geräte mit begrenzten Ressourcen. 
+- *Nodes* sind größere Geräte, die Traffic routen.
+
+Kleine Geräte bauen kein Netz. Sie sind *Accesspoints*, d.h. Zugangspunkte zu den Supernodes. Supernodes sind die einzigen Nodes im Freifunk-Netz - also Nodes.
+
+Du musst Dich entscheiden, wie Du Freifunk machst, baust und was Dir dabei wichtig ist.  Ich hab' Dir erzählt, wie die Dinge funktionieren.
+Ideen zur Weiterentwicklung, zum Testen und Forschen gibt's dann in Teil 3 dieser Blog-Serie.
+
+Und nun mach Freifunk. Viel Spaß am Gerät.
