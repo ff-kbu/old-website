@@ -151,7 +151,7 @@ dPDcn+ohgUts/pNrGo7jPIAWhu8R0j9OvwIDAQAB
 
 In Teil 1 wird Tinc verwendet, um Datenpakete mit anderen Nodes auszutauschen. Tinc benötigt OpenSSL und damit viel Speicherplatz. Als Link-State-Routing-Protokoll belastet es die Nodes zusätzlich. Babel benötigt weniger. Komplizierter ist das Routing zu anderen Nodes, die nicht per Funk oder Kabel erreichbar sind:
 
-* Mit welchen anderen SuperNodes möchte ich Daten austauschen?
+* Mit welchen anderen Nodes möchte ich Daten austauschen?
 * Welches Routing-Protokoll verwende ich?
 
 Da ich einen IP-Adressbereich der KBU-Community verwende, entscheide ich mich für babel und fastd-Tunnel. Babel ist dabei das <a href="https://de.wikipedia.org/wiki/Interior_Gateway_Protocol"> Interior Gateway Protocol (IGP)</a>. Aktuell gibt es kaum fastd-Babel-Peerings im KBU-Netz. Alles ist experimentell.
