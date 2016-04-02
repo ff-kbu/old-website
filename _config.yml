@@ -13,7 +13,6 @@ image:
     output: generated
     presets:
         medium:
-            width: 300
             height: 260
 defaults:
   -
