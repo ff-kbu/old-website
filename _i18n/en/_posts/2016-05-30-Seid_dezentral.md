@@ -1,0 +1,1 @@
+../../de/_posts/2016-05-30-Seid_dezentral.md
