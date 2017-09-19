@@ -269,7 +269,7 @@ root@LEDE:~# cat > /etc/openvpn/openvpn.conf <<EOF
 EOF
 ```
 
-Und registieren:
+Und registrieren:
 
 ```
 root@LEDE:~# uci -q batch <<EOF
@@ -371,7 +371,7 @@ Falls Du anders vorgehen möchtest, kannst Du auch den RSA Schlüssel inkl.
 Certificate-Signing-Request (CSR) auf dem Notebook erstellen, nur den CSR zum Router übertragen und dort signieren.
 
 In größeren Unternehmen wird das Schlüsselmaterial häufig auf verschiedenen Rechnern 
-ohne Netzwerk-Zugang oder Smartcards erzeugt.
+ohne Netzwerkzugang oder Smartcards erzeugt.
 
 
 ### 3. Client-Konfiguration erstellen
@@ -396,7 +396,7 @@ EOF
 ```
 
 ### 4. Verbindung zum Server starten
-Nun kannst Du Dich zum Server verbinden
+Nun kannst Du Dich zum Server verbinden:
 
 ```
 root@Notebook:~# openvpn --config /etc/openvpn/freifunk_vpn/openvpn.conf
