@@ -91,7 +91,7 @@ EOF
 ### 4. Netzwerk-Interfaces definieren
 
 Damit der Router aus dem Freifunk-Netz erreicht werden kann, musst Du eine IP-Adresse fest zuweisen. Bitte trage die Adresse in der
-<a href="https://kbu.freifunk.net/wiki/index.php?title=IP_Subnetze">Wiki</a> ein, damit sie nicht doppelt verwendet wird. Zudem braucht OpenVPN ein eigenes Interface:
+<a href="https://kbu.freifunk.net/wiki/index.php?title=IP_Subnetze#Feste_IP-Adressen_im_Freifunk-Netz">Wiki</a> ein, damit sie nicht doppelt verwendet wird. Zudem braucht OpenVPN ein eigenes Interface:
 
 ```
 root@LEDE:~# uci -q batch <<EOF
