@@ -14,6 +14,8 @@ image:
     presets:
         medium:
             height: 260
+        small:
+            height: 130
 defaults:
   -
     scope:
