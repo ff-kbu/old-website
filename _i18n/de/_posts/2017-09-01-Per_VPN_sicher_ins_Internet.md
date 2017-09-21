@@ -435,5 +435,5 @@ Ich hoffe, Dein Server läuft soweit gut und die Verschlüsselung funktioniert. 
 
 1. Das VPN verteilt IPv6-ULA Adressen mit route 2001::/3, damit IPv6 nicht mehr über Freifunk unverschlüsselt übertragen wird.  Damit IPv6 extern funktioniert, brauchst Du einen *Public IPv6 Block*, den Du statt dem ULA-Netz verteilst. Tunnel gibt's z.B. bei <a href="https://he.net">he.net</a>.
 2. Das VPN schützt nur vor Angreifern im Freifunk-Netz – im Internet bist Du ungeschützt. Hier hilft nur Ende-Zu-Ende Verschlüsselung. Hilfe gibt's auf einer <a href="https://cryptoparty.koeln">Cryptoparty</a>.
-3. Dein eigener VPN-Server entlastet das Freifunk-Netz, da Dein Internet-Traffic nicht über die wenigen Gateways geleitet werden muss.
+3. Dein eigener VPN-Server entlastet das Freifunk-Netz, falls Dein Internet-Traffic nicht über die wenigen Gateways geleitet werden muss – z.B. VPN-Server direkt per Funk erreichbar.
 Es reicht eine Funk- oder fastd-Verbindung zwischen den beteiligten Nodes.
