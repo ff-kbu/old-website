@@ -2,7 +2,7 @@
 layout: default
 title: "VPN-Server im Eigenbau"
 author: "Frank Nord"
-date: 2017-09-01 21:00:00
+date: 2017-09-22 21:00:00
 ---
 ## Unverschlüsseltes Funknetz
 
