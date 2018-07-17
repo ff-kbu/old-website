@@ -30,6 +30,6 @@ deploy:
   - apt-get install -y rsync
   - eval $(ssh-agent -s)
   - ssh-add <(echo "$SSH_PRIVATE_KEY" | base64 -d) 
-  - rsync -e "ssh -4 -o StrictHostKeyChecking=no -p 2310" --delete -Havc ./_site/ www-data-gitlab@www1.kbu.freifunk.net:/var/www/website
+  - rsync -e "ssh -o StrictHostKeyChecking=no" --delete -Havc ./_site/ www-data-gitlab@www1.kbu.freifunk.net:/var/www/website
   only:
   - master
