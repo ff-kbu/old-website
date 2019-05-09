@@ -1,0 +1,35 @@
+stages:
+- build
+- deploy
+  
+image: ruby:2.2-jessie
+
+before_script:
+  - export LANG=C.UTF-8
+
+cache:
+  untracked: true
+
+build:
+  stage: build
+  #  artifacts:
+  #  paths:
+  #  - _site/
+      
+  script: 
+  - gem install bundler --no-ri --no-rdoc
+  - bundle install -j $(nproc) --path vendor
+  - bundle exec jekyll build
+  
+deploy:
+  stage: deploy
+  dependencies: 
+  - build
+  script:
+  - apt-get update
+  - apt-get install -y rsync
+  - eval $(ssh-agent -s)
+  - ssh-add <(echo "$SSH_PRIVATE_KEY" | base64 -d) 
+  - rsync -e "ssh -o StrictHostKeyChecking=no" --delete -Havc ./_site/ www-data-gitlab@www1.kbu.freifunk.net:/var/www/website
+  only:
+  - master
