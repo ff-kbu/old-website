@@ -2,7 +2,7 @@ stages:
 - build
 - deploy
   
-image: ruby:2.2-jessie
+image: ruby:2.2
 
 before_script:
   - export LANG=C.UTF-8
