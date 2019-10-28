@@ -2,7 +2,11 @@ stages:
 - build
 - deploy
   
+<<<<<<< HEAD
 image: ruby:2.2
+=======
+image: ruby:2.2-jessie
+>>>>>>> kbu/master
 
 before_script:
   - export LANG=C.UTF-8
